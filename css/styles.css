@@ -63,6 +63,8 @@
 html {
   font-size: 15px;
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -74,12 +76,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -2219,6 +2225,9 @@ ul, ol {
   display: flex;
   min-height: 100vh;
   background: #f1f5f9;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Sidebar */
@@ -2335,6 +2344,9 @@ ul, ol {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 .admin-topbar {
   background: var(--bg-surface);
@@ -2347,6 +2359,7 @@ ul, ol {
   position: sticky;
   top: 0;
   z-index: 80;
+  max-width: 100%;
 }
 .topbar-left {
   display: flex;
@@ -2409,6 +2422,17 @@ ul, ol {
 .admin-content-inner {
   padding: 30px;
   flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard-container,
+.admin-page-container {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* Admin Login Screen */
@@ -2543,8 +2567,11 @@ ul, ol {
 
 .dashboard-split-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: 25px;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 .dashboard-panel {
   background: var(--bg-surface);
@@ -2552,6 +2579,10 @@ ul, ol {
   border-radius: var(--radius-md);
   padding: 20px;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 .panel-header {
   display: flex;
@@ -2610,11 +2641,16 @@ ul, ol {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 .table-responsive {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  display: block;
 }
 .admin-table {
   width: 100%;
@@ -2949,10 +2985,13 @@ ul, ol {
     grid-template-columns: repeat(3, 1fr);
   }
   .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .dashboard-split-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
   }
   .regional-grid {
     grid-template-columns: 1fr;
@@ -3310,11 +3349,21 @@ ul, ol {
   }
 
   /* Table horizontal touch scroll */
+  .admin-panel,
+  .dashboard-panel {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
+    width: 100%;
+    max-width: 100%;
+    display: block;
   }
   .admin-table {
     min-width: 980px;
