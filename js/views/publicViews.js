@@ -6,7 +6,7 @@ export const publicViews = {
   // Utility to create Zalo quote link with product name
   getZaloLink(customText = "") {
     const settings = storage.getSettings();
-    const baseUrl = settings.zaloUrl || "https://zalo.me/0905888999";
+    const baseUrl = settings.zaloUrl || "https://zalo.me/0362931719";
     return baseUrl;
   },
 

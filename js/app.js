@@ -1,8 +1,8 @@
-import { storage } from "./services/storage.js?v=3";
-import { toast } from "./components/toast.js?v=3";
-import { modal } from "./components/modal.js?v=3";
-import { publicViews } from "./views/publicViews.js?v=3";
-import { adminViews } from "./views/adminViews.js?v=3";
+import { storage } from "./services/storage.js?v=4";
+import { toast } from "./components/toast.js?v=4";
+import { modal } from "./components/modal.js?v=4";
+import { publicViews } from "./views/publicViews.js?v=4";
+import { adminViews } from "./views/adminViews.js?v=4";
 
 class App {
   constructor() {

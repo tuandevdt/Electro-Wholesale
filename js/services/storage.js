@@ -36,6 +36,15 @@ class StorageService {
       localStorage.setItem(STORAGE_KEYS.CONTACTS, JSON.stringify(DEFAULT_CONTACTS));
       localStorage.setItem(STORAGE_KEYS.INITIALIZED, "true");
       this.dispatchChange("all");
+    } else {
+      // Auto-update Zalo phone and URL if still pointing to old default
+      const currentSettings = this.get(STORAGE_KEYS.SETTINGS, null);
+      if (currentSettings && (currentSettings.zaloPhone === "0905 888 999" || currentSettings.zaloUrl.includes("0905888999"))) {
+        currentSettings.zaloPhone = DEFAULT_SETTINGS.zaloPhone;
+        currentSettings.zaloUrl = DEFAULT_SETTINGS.zaloUrl;
+        currentSettings.phone = DEFAULT_SETTINGS.phone;
+        this.set(STORAGE_KEYS.SETTINGS, currentSettings, "settings");
+      }
     }
   }
 

@@ -1474,12 +1474,12 @@ export const adminViews = {
               <div class="form-row-2">
                 <div class="form-group">
                   <label class="required">Đường dẫn Zalo (Zalo URL):</label>
-                  <input type="url" id="st-zalo-url" class="form-input" value="${settings.zaloUrl}" required placeholder="https://zalo.me/0905888999">
+                  <input type="url" id="st-zalo-url" class="form-input" value="${settings.zaloUrl}" required placeholder="https://zalo.me/0362931719">
                   <small class="text-muted">Được gán vào toàn bộ nút Zalo trên Header, Product Card, Chi tiết, và Footer.</small>
                 </div>
                 <div class="form-group">
                   <label class="required">Số điện thoại Zalo trực tuyến:</label>
-                  <input type="text" id="st-zalo-phone" class="form-input" value="${settings.zaloPhone}" required placeholder="0905 888 999">
+                  <input type="text" id="st-zalo-phone" class="form-input" value="${settings.zaloPhone}" required placeholder="0362 931 719">
                 </div>
               </div>
 
